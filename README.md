@@ -17,9 +17,12 @@ For a detailed breakdown of the libraries used and their implementations, please
 
 
 <details>
-<summary>TCA (The Composable Architecture)</summary>
+<summary>TCA (The Composable Architecture) 🚧 In Progress</summary>
 
 #### TCA (The Composable Architecture)
+
+This section is currently a work in progress.  
+More details and examples will be added soon. 🚀
 
 <!-- Add details, explanations, and code snippets for TCA here -->
 
@@ -51,18 +54,24 @@ For a detailed breakdown of the libraries used and their implementations, please
 </details>
 
 <details>
-<summary>RIBs</summary>
+<summary>RIBs 🚧 In Progress</summary>
 
 #### RIBs
+
+This section is currently a work in progress.  
+More details, explanations, and code snippets will be added soon. 🚀
 
 <!-- Add details, explanations, and code snippets for RIBs here -->
 
 </details>
 
 <details>
-<summary>ReactorKit</summary>
+<summary>ReactorKit 🛠️ Work in Progress</summary>
 
 #### ReactorKit
+
+Content for ReactorKit is under development.  
+Stay tuned for detailed explanations, examples, and code snippets. ✨
 
 <!-- Add details, explanations, and code snippets for ReactorKit here -->
 
