@@ -3,7 +3,7 @@
 ## About
 
 **GitHubFinder_ArchExamples** is a collection of practical examples implementing various iOS architecture patterns, including **MVVM**, **TCA (The Composable Architecture)**, **RIBs**, **ReactorKit**, and more.  
-This repository utilizes a variety of third-party libraries, such as **RxSwift**, **Combine**, **SnapKit**, **PinLayout**, and **FlexLayout**, to demonstrate their application within each architecture.  
+This repository utilizes a variety of third-party libraries, such as **RxSwift**, **Combine**, **RxFlow**, **RxDataSource**, **SnapKit**, **PinLayout**, and **FlexLayout**, to demonstrate their application within each architecture.  
 
 Each example is tailored to its respective architecture, incorporating the libraries and tools best suited to its needs.
 For a detailed breakdown of the libraries used and their implementations, please refer to the Architecture-Specific Descriptions provided in the repository.
