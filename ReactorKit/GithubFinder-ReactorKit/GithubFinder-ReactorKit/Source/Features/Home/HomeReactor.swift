@@ -18,7 +18,7 @@ final class HomeReactor: Reactor {
     // MARK: - Action
 
     enum Action {
-
+        
     }
     
     // MARK: - Mutation

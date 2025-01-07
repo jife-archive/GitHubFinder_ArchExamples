@@ -1,5 +1,5 @@
 //
-//  LoginViewController.swift
+//  ProfileViewController.swift
 //  GithubFinder-ReactorKit
 //
 //  Created by 최지철 on 12/19/24.
@@ -7,19 +7,18 @@
 
 import UIKit
 
-final class LoginViewController: BaseViewController<LoginReactor> {
+final class ProfileViewController: BaseViewController<ProfileReactor> {
     
     // MARK: - Properties
 
-    var disposeBag = DisposeBag()
 
     // MARK: - UI
 
     
     // MARK: - Initializer
 
-    init(reactor: LoginReactor) {
-        super.init(nibName: nil, bundle: nil)
+    init(reactor: ProfileReactor) {
+        super.init()
         self.reactor = reactor
     }
     
@@ -50,16 +49,16 @@ final class LoginViewController: BaseViewController<LoginReactor> {
     
     // MARK: - Binding
 
-    override func bind(reactor: LoginReactor) {
+    override func bind(reactor: ProfileReactor) {
         bindState(reactor: reactor)
         bindAction()
     }
 
-    private func bindState(reactor: LoginReactor) {
+    nonisolated private func bindState(reactor: ProfileReactor) {
 
     }
 
-    private func bindAction() {
+    nonisolated private func bindAction() {
 
     }
 }

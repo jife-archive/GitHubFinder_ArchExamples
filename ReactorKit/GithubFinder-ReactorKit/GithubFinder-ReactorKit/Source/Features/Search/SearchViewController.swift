@@ -11,7 +11,6 @@ final class SearchViewController: BaseViewController<SearchReactor> {
     
     // MARK: - Properties
 
-    var disposeBag = DisposeBag()
 
     // MARK: - UI
 
@@ -19,7 +18,7 @@ final class SearchViewController: BaseViewController<SearchReactor> {
     // MARK: - Initializer
 
     init(reactor: SearchReactor) {
-        super.init(nibName: nil, bundle: nil)
+        super.init()
         self.reactor = reactor
     }
     
@@ -55,11 +54,11 @@ final class SearchViewController: BaseViewController<SearchReactor> {
         bindAction()
     }
 
-    private func bindState(reactor: SearchReactor) {
+    nonisolated private func bindState(reactor: SearchReactor) {
 
     }
 
-    private func bindAction() {
+    nonisolated private func bindAction() {
 
     }
 }
