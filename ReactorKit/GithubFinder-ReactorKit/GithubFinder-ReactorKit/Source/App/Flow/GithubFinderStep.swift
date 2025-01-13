@@ -12,6 +12,7 @@ enum GithubFinderStep: Step {
     case search
     case home
     case webView
-    case profileIsRequired
+    case profile
     case loginIsRequired
+    case loginCompleted
 }

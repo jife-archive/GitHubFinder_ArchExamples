@@ -8,55 +8,58 @@
 import UIKit
 
 import RxFlow
+import RxSwift
+import RxCocoa
 
 final class AppFlow: Flow {
+    
+    //MARK: - Properties
+    
+    private let rootWindow: UIWindow
+    let steps: PublishRelay<Step> = .init()
+    private let disposeBag: DisposeBag = .init()
     var root: Presentable {
-        return self.rootViewController
+        return self.rootWindow
     }
+    
+    //MARK: - Initializers
 
-    private let rootViewController: TabBarViewController
-
-    init() {
-        self.rootViewController = TabBarViewController()
+    init(
+        with window: UIWindow
+    ) {
+        self.rootWindow = window
     }
-
-    func navigate(to step: Step) -> FlowContributors {
-        guard let step = step as? GithubFinderStep else { return .none }
-
-        switch step {
-        case .tabBar:
-            <#code#>
-        case .search:
-            <#code#>
-        case .home:
-            <#code#>
-        case .webView:
-            <#code#>
-        case .profileIsRequired:
-            <#code#>
-        case .loginIsRequired:
-            <#code#>
+    
+    deinit {
+        let className = "\(type(of: self))"
+        let functionName = "\(#function)"
+        let message = "\(className): \(functionName)"
+        Task.detached {
+            await log.verbose(message)
         }
-    }
-
-    private func setupTabBar() -> FlowContributors {
-        let homeFlow = HomeFlow()
-
-        Flows.use(searchFlow, profileFlow, when: .created) { [weak self] (searchRoot, profileRoot) in
-            let searchTab = UITabBarItem(title: "Search",
-                                         image: UIImage(systemName: "magnifyingglass"), selectedImage: nil)
-            searchRoot.tabBarItem = searchTab
-
-            let profileTab = UITabBarItem(title: "Profile",
-                                          image: UIImage(systemName: "person.circle"), selectedImage: nil)
-            profileRoot.tabBarItem = profileTab
-
-            self?.rootViewController.setViewControllers([searchRoot, profileRoot], animated: false)
-        }
-
-        return .multiple(flowContributors: [
-            .contribute(withNext: searchFlow),
-            .contribute(withNext: profileFlow)
-        ])
     }
 }
+    //MARK: - Flow Methods
+
+extension AppFlow {
+    func navigate(to step: Step) -> FlowContributors {
+        guard let step = step as? GithubFinderStep else { return .none }
+        switch step {
+        case .tabBar:
+            return .none
+        case .search:
+            return .none
+        case .home:
+            return .none
+        case .webView:
+            return .none
+        case .profile:
+            return .none
+        case .loginIsRequired:
+            return .none
+        case .loginCompleted:
+            return .none
+        }
+    }
+}
+
